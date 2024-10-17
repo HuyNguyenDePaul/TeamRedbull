@@ -1,0 +1,6 @@
+<h2>Real-Time FX Rates</h2>
+<ul>
+  {% for currency, rate in fx_rates.items %}
+    <li>{{ currency }}: {{ rate }}</li>
+  {% endfor %}
+</ul>
