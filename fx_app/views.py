@@ -51,7 +51,6 @@ def currency_converter_view(request):
             data = response.json()
             conversion_rate = Decimal(data.get('conversion_rate', 1))  # Convert to Decimal
             converted_amount = amount * conversion_rate  # Perform multiplication with Decimals
-            converted_amount = round(converted_amount, 2)  # Round the result to 2 decimal places
         else:
             conversion_rate = Decimal('1')  # Default to 1 if API fails
             converted_amount = amount  # No conversion in this case
